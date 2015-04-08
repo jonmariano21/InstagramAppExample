@@ -9,8 +9,10 @@ var app = express();
 var dotenv = require('dotenv');
 dotenv.load();
 
+// Move to auth.js
 //add insta API
 //add insta API setup
+/*
 var ig = require('instagram-node-lib');
 ig.set('client_id', process.env.instagram_client_id);
 ig.set('client_secret', process.env.instagram_client_secret);
@@ -21,11 +23,14 @@ ig.tags.info({
 		console.log(data);
 	}
 });
+*/
 
 
 //route for hashtag
 var hashtag = require('./routes/hashtag');
 var index = require('./routes/index');
+
+
 //database setup
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGOHQ_URI || 'mongodb://localhost/instagramexample');
@@ -35,6 +40,8 @@ app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Slide 8
 app.use(express.bodyParser());
 
 //routes

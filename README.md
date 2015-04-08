@@ -1,5 +1,8 @@
+Assignment 0, Jonathan Mariano, COGS 121 SP15
+
 Instagram Example
 ===========
+
 
 Discussion 1:
 
